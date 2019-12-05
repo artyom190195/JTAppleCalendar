@@ -129,7 +129,9 @@ class JTACMonthLayout: UICollectionViewLayout, JTACMonthLayoutProtocol {
         
         if !layoutIsReadyToBePrepared {
             // Layoout may not be ready, but user might have reloaded with an anchor date
-            let requestedOffset = delegate.requestedContentOffset
+            var requestedOffset = delegate.requestedContentOffset
+            requestedOffset.y += collectionView!.contentInset.top
+            
             if requestedOffset != .zero { collectionView!.setContentOffset(requestedOffset, animated: false) }
             
             // execute any other delayed tasks
