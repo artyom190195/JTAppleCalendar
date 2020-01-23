@@ -34,7 +34,7 @@ public protocol JTACCellMonthViewDelegate: class {
 }
 
 open class JTACMonthCell: UICollectionViewCell {
-    @IBOutlet var monthView: JTACCellMonthView?
+    @IBOutlet public var monthView: JTACCellMonthView?
     weak var delegate: JTACCellMonthViewDelegate?
     
     func setupWith(configurationParameters: ConfigurationParameters,
