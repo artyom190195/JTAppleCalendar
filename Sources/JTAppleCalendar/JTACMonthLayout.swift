@@ -209,9 +209,9 @@ class JTACMonthLayout: UICollectionViewLayout, JTACMonthLayoutProtocol {
     override func invalidateLayout() {
         super.invalidateLayout()
         
-        if isDirty && reloadWasTriggered {
+//        if isDirty && reloadWasTriggered {
             clearCache()
-        }
+//        }
     }
 
     /// Returns the layout attributes for all of the cells
